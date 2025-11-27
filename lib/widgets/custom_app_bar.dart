@@ -1,61 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-/// Custom AppBar widget for the biometric product management application.
-/// Implements platform-adaptive navigation patterns with secure minimalism design.
-///
-/// Features:
-/// - Multiple variants for different screen contexts
-/// - Platform-aware back button behavior
-/// - Consistent elevation and shadow styling
-/// - Support for actions and custom titles
-/// - Responsive layout for various screen sizes
 enum CustomAppBarVariant {
-  /// Standard app bar with back button and title
   standard,
-
-  /// App bar for authentication screens (no back button)
   authentication,
-
-  /// App bar with logout action for product list
   productList,
-
-  /// App bar with search functionality
   search,
-
-  /// Minimal app bar with only title
   minimal,
 }
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  /// The title to display in the app bar
   final String title;
-
-  /// The variant of the app bar to display
   final CustomAppBarVariant variant;
-
-  /// Optional leading widget (overrides default back button)
   final Widget? leading;
-
-  /// Optional list of action widgets
   final List<Widget>? actions;
-
-  /// Whether to show the back button (only for standard variant)
   final bool showBackButton;
-
-  /// Callback for back button press
   final VoidCallback? onBackPressed;
-
-  /// Callback for logout action (productList variant)
   final VoidCallback? onLogoutPressed;
-
-  /// Callback for search action (search variant)
   final VoidCallback? onSearchPressed;
-
-  /// Whether to center the title
   final bool centerTitle;
-
-  /// Optional subtitle text
   final String? subtitle;
 
   const CustomAppBar({
@@ -94,8 +57,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       surfaceTintColor: Colors.transparent,
     );
   }
-
-  /// Builds the leading widget based on variant
   Widget? _buildLeading(BuildContext context) {
     if (leading != null) return leading;
 
@@ -118,8 +79,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         return null;
     }
   }
-
-  /// Builds the title widget with optional subtitle
   Widget _buildTitle(BuildContext context) {
     final theme = Theme.of(context);
 
@@ -162,8 +121,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
     );
   }
-
-  /// Builds action widgets based on variant
   List<Widget>? _buildActions(BuildContext context) {
     if (actions != null) return actions;
 
@@ -176,7 +133,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           IconButton(
             icon: const Icon(Icons.refresh),
             onPressed: () {
-              // Pull-to-refresh alternative for manual refresh
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(
@@ -209,7 +165,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             icon: const Icon(Icons.search),
             onPressed: onSearchPressed ??
                 () {
-                  // Navigate to search functionality
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
@@ -232,8 +187,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         return null;
     }
   }
-
-  /// Shows logout confirmation dialog
   void _showLogoutDialog(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
@@ -299,9 +252,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 }
 
-/// Factory constructors for common app bar configurations
 extension CustomAppBarFactory on CustomAppBar {
-  /// Creates an app bar for the login screen
   static CustomAppBar forLogin() {
     return const CustomAppBar(
       title: 'Secure Login',
@@ -310,7 +261,6 @@ extension CustomAppBarFactory on CustomAppBar {
     );
   }
 
-  /// Creates an app bar for the product list screen
   static CustomAppBar forProductList({
     VoidCallback? onLogoutPressed,
   }) {
@@ -322,7 +272,6 @@ extension CustomAppBarFactory on CustomAppBar {
     );
   }
 
-  /// Creates a standard app bar with back button
   static CustomAppBar standard({
     required String title,
     String? subtitle,
@@ -338,7 +287,6 @@ extension CustomAppBarFactory on CustomAppBar {
     );
   }
 
-  /// Creates a minimal app bar without actions
   static CustomAppBar minimal({
     required String title,
     bool centerTitle = false,
