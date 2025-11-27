@@ -4,7 +4,6 @@ import 'package:sizer/sizer.dart';
 import '../../../core/app_export.dart';
 import '../../../widgets/custom_icon_widget.dart';
 
-/// Biometric authentication button widget with loading state
 class BiometricButtonWidget extends StatelessWidget {
   final VoidCallback? onPressed;
   final bool isLoading;
