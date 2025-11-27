@@ -1,34 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-/// A class that contains all theme configurations for the biometric product management application.
-/// Implements Professional Depth color palette with Secure Minimalism design principles.
 class AppTheme {
   AppTheme._();
 
-  // Primary colors - Deep blue for trust and security
   static const Color primaryLight = Color(0xFF1565C0);
   static const Color primaryVariantLight = Color(0xFF0D47A1);
   static const Color primaryDark = Color(0xFF42A5F5);
   static const Color primaryVariantDark = Color(0xFF1976D2);
-
-  // Secondary colors - Neutral slate for supporting content
+  
   static const Color secondaryLight = Color(0xFF37474F);
   static const Color secondaryVariantLight = Color(0xFF263238);
   static const Color secondaryDark = Color(0xFF546E7A);
   static const Color secondaryVariantDark = Color(0xFF455A64);
 
-  // Surface colors - Clean backgrounds optimized for extended mobile use
   static const Color surfaceLight = Color(0xFFFAFAFA);
   static const Color surfaceDark = Color(0xFF121212);
   static const Color backgroundLight = Color(0xFFFAFAFA);
   static const Color backgroundDark = Color(0xFF121212);
 
-  // Accent colors - Teal for success states
   static const Color accentLight = Color(0xFF00695C);
   static const Color accentDark = Color(0xFF26A69A);
 
-  // Semantic colors
   static const Color warningLight = Color(0xFFF57C00);
   static const Color warningDark = Color(0xFFFF9800);
   static const Color errorLight = Color(0xFFC62828);
@@ -36,13 +29,11 @@ class AppTheme {
   static const Color successLight = Color(0xFF2E7D32);
   static const Color successDark = Color(0xFF66BB6A);
 
-  // Text colors - High contrast for readability
   static const Color textPrimaryLight = Color(0xFF212121);
   static const Color textSecondaryLight = Color(0xFF757575);
   static const Color textPrimaryDark = Color(0xFFFFFFFF);
   static const Color textSecondaryDark = Color(0xFFB0B0B0);
 
-  // On-color variants
   static const Color onPrimaryLight = Color(0xFFFFFFFF);
   static const Color onSecondaryLight = Color(0xFFFFFFFF);
   static const Color onSurfaceLight = Color(0xFF212121);
@@ -52,30 +43,25 @@ class AppTheme {
   static const Color onSurfaceDark = Color(0xFFFFFFFF);
   static const Color onErrorDark = Color(0xFF000000);
 
-  // Card and dialog colors
   static const Color cardLight = Color(0xFFFFFFFF);
   static const Color cardDark = Color(0xFF1E1E1E);
   static const Color dialogLight = Color(0xFFFFFFFF);
   static const Color dialogDark = Color(0xFF2D2D2D);
 
-  // Shadow colors - Subtle Material Design 3 elevation
   static const Color shadowLight = Color(0x0A000000);
   static const Color shadowDark = Color(0x14FFFFFF);
 
-  // Divider colors - Clean separation
   static const Color dividerLight = Color(0x1F000000);
   static const Color dividerDark = Color(0x1FFFFFFF);
 
-  // Text emphasis levels
-  static const Color textHighEmphasisLight = Color(0xDE000000); // 87% opacity
-  static const Color textMediumEmphasisLight = Color(0x99000000); // 60% opacity
-  static const Color textDisabledLight = Color(0x61000000); // 38% opacity
+  static const Color textHighEmphasisLight = Color(0xDE000000);
+  static const Color textMediumEmphasisLight = Color(0x99000000);
+  static const Color textDisabledLight = Color(0x61000000);
 
-  static const Color textHighEmphasisDark = Color(0xDEFFFFFF); // 87% opacity
-  static const Color textMediumEmphasisDark = Color(0x99FFFFFF); // 60% opacity
-  static const Color textDisabledDark = Color(0x61FFFFFF); // 38% opacity
+  static const Color textHighEmphasisDark = Color(0xDEFFFFFF);
+  static const Color textMediumEmphasisDark = Color(0x99FFFFFF);
+  static const Color textDisabledDark = Color(0x61FFFFFF);
 
-  /// Light theme configuration
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     useMaterial3: true,
@@ -352,7 +338,6 @@ class AppTheme {
     ), dialogTheme: DialogThemeData(backgroundColor: dialogLight),
   );
 
-  /// Dark theme configuration
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     useMaterial3: true,
@@ -629,8 +614,6 @@ class AppTheme {
     ), dialogTheme: DialogThemeData(backgroundColor: dialogDark),
   );
 
-  /// Helper method to build text theme based on brightness
-  /// Implements Roboto font family with appropriate weights for mobile readability
   static TextTheme _buildTextTheme({required bool isLight}) {
     final Color textHighEmphasis =
         isLight ? textHighEmphasisLight : textHighEmphasisDark;
@@ -639,7 +622,6 @@ class AppTheme {
     final Color textDisabled = isLight ? textDisabledLight : textDisabledDark;
 
     return TextTheme(
-      // Display styles - Large headings
       displayLarge: GoogleFonts.roboto(
         fontSize: 57,
         fontWeight: FontWeight.w400,
@@ -662,7 +644,6 @@ class AppTheme {
         height: 1.22,
       ),
 
-      // Headline styles - Section headings
       headlineLarge: GoogleFonts.roboto(
         fontSize: 32,
         fontWeight: FontWeight.w500,
@@ -685,7 +666,6 @@ class AppTheme {
         height: 1.33,
       ),
 
-      // Title styles - Card titles and list items
       titleLarge: GoogleFonts.roboto(
         fontSize: 22,
         fontWeight: FontWeight.w500,
@@ -708,7 +688,6 @@ class AppTheme {
         height: 1.43,
       ),
 
-      // Body styles - Main content text
       bodyLarge: GoogleFonts.roboto(
         fontSize: 16,
         fontWeight: FontWeight.w400,
@@ -731,7 +710,6 @@ class AppTheme {
         height: 1.33,
       ),
 
-      // Label styles - Buttons and small text
       labelLarge: GoogleFonts.roboto(
         fontSize: 14,
         fontWeight: FontWeight.w500,
@@ -756,37 +734,31 @@ class AppTheme {
     );
   }
 
-  /// Animation duration constants for consistent motion design
   static const Duration shortAnimationDuration = Duration(milliseconds: 200);
   static const Duration mediumAnimationDuration = Duration(milliseconds: 250);
   static const Duration longAnimationDuration = Duration(milliseconds: 300);
 
-  /// Animation curves for natural motion
   static const Curve standardCurve = Curves.easeInOut;
   static const Curve accelerateCurve = Curves.easeIn;
   static const Curve decelerateCurve = Curves.easeOut;
 
-  /// Elevation levels following Material Design 3
   static const double elevation0 = 0.0;
   static const double elevation1 = 1.0;
   static const double elevation2 = 2.0;
   static const double elevation3 = 3.0;
   static const double elevation4 = 4.0;
 
-  /// Border radius constants for consistent shapes
   static const double borderRadiusSmall = 4.0;
   static const double borderRadiusMedium = 8.0;
   static const double borderRadiusLarge = 12.0;
   static const double borderRadiusXLarge = 16.0;
 
-  /// Spacing constants for consistent layout
   static const double spacingXSmall = 4.0;
   static const double spacingSmall = 8.0;
   static const double spacingMedium = 16.0;
   static const double spacingLarge = 24.0;
   static const double spacingXLarge = 32.0;
 
-  /// Touch target sizes for mobile optimization
   static const double minTouchTargetSize = 48.0;
   static const double minTouchTargetSizeIOS = 44.0;
 }
