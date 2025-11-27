@@ -4,7 +4,6 @@ import 'package:sizer/sizer.dart';
 import '../../../core/app_export.dart';
 import '../../../widgets/custom_icon_widget.dart';
 
-/// Login form widget containing username and password fields with validation
 class LoginFormWidget extends StatelessWidget {
   final GlobalKey<FormState> formKey;
   final TextEditingController usernameController;
@@ -42,7 +41,6 @@ class LoginFormWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // Username Field
           TextField(
             controller: usernameController,
             enabled: !isLoading,
@@ -67,7 +65,6 @@ class LoginFormWidget extends StatelessWidget {
 
           SizedBox(height: 2.h),
 
-          // Password Field
           TextField(
             controller: passwordController,
             enabled: !isLoading,
@@ -105,7 +102,6 @@ class LoginFormWidget extends StatelessWidget {
 
           SizedBox(height: 4.h),
 
-          // Login Button
           SizedBox(
             height: 6.h,
             child: ElevatedButton(
