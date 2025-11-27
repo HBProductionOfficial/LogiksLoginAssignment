@@ -6,7 +6,6 @@ import './widgets/biometric_button_widget.dart';
 import './widgets/login_form_widget.dart';
 import 'package:assignment/core/services/biometric_auth_service.dart';
 
-/// Login Screen with biometric authentication and traditional credential validation
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -15,22 +14,18 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  // --- Services ---
   final BiometricAuthService _bio = BiometricAuthService();
 
-  // --- Controllers / Form ---
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  // --- UI State ---
   bool _isPasswordVisible = false;
   bool _isLoading = false;
   bool _isBiometricAvailable = false;
   String? _usernameError;
   String? _passwordError;
 
-  // Demo credentials
   static const String _mockUsername = 'testuser';
   static const String _mockPassword = 'password123';
 
@@ -47,14 +42,12 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  /// Check if biometric authentication is available on the device
   Future<void> _checkBiometricAvailability() async {
     final ok = await _bio.isAvailable();
     if (!mounted) return;
     setState(() => _isBiometricAvailable = ok);
   }
 
-  // --------- Validators ---------
   String? _validateUsername(String? value) {
     if (value == null || value.isEmpty) return 'Username is required';
     return null;
@@ -66,7 +59,6 @@ class _LoginScreenState extends State<LoginScreen> {
     return null;
   }
 
-  // --------- Traditional login ---------
   Future<void> _handleLogin() async {
     setState(() {
       _usernameError = _validateUsername(_usernameController.text);
@@ -76,7 +68,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
     setState(() => _isLoading = true);
 
-    // Simulate network delay
     await Future.delayed(const Duration(seconds: 2));
     if (!mounted) return;
 
@@ -94,7 +85,6 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  // --------- Biometric login ---------
   Future<void> _handleBiometricAuth() async {
     if (!_isBiometricAvailable) {
       _showErrorDialog(
@@ -144,7 +134,6 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  // --------- Dialog helper ---------
   void _showErrorDialog(String title, String message) {
     final theme = Theme.of(context);
     showDialog(
@@ -172,7 +161,6 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  // --------- UI ---------
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -212,7 +200,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         SizedBox(height: 5.h),
 
-                        // Biometric button (only when supported)
                         if (_isBiometricAvailable)
                           BiometricButtonWidget(
                             onPressed: _isLoading ? null : _handleBiometricAuth,
@@ -251,7 +238,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                         if (_isBiometricAvailable) SizedBox(height: 3.h),
 
-                        // Traditional login form
                         LoginFormWidget(
                           formKey: _formKey,
                           usernameController: _usernameController,
