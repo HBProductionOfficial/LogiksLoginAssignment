@@ -20,7 +20,6 @@ extension ImageTypeExtension on String {
 
 enum ImageType { svg, png, network, file, unknown }
 
-// ignore_for_file: must_be_immutable
 class CustomImageWidget extends StatelessWidget {
   CustomImageWidget({
     this.imageUrl,
@@ -38,34 +37,18 @@ class CustomImageWidget extends StatelessWidget {
     this.semanticLabel,
   });
 
-  ///[imageUrl] is required parameter for showing image
   final String? imageUrl;
-
   final double? height;
-
   final double? width;
-
   final BoxFit? fit;
-
   final String placeHolder;
-
   final Color? color;
-
   final Alignment? alignment;
-
   final VoidCallback? onTap;
-
   final BorderRadius? radius;
-
   final EdgeInsetsGeometry? margin;
-
   final BoxBorder? border;
-
-  /// Optional widget to show when the image fails to load.
-  /// If null, a default asset image is shown.
   final Widget? errorWidget;
-
-  /// Semantic label for the image to improve accessibility
   final String? semanticLabel;
 
   @override
@@ -85,7 +68,6 @@ class CustomImageWidget extends StatelessWidget {
     );
   }
 
-  ///build the image with border radius
   _buildCircleImage() {
     if (radius != null) {
       return ClipRRect(
@@ -97,7 +79,6 @@ class CustomImageWidget extends StatelessWidget {
     }
   }
 
-  ///build the image with border and border radius style
   _buildImageWithBorder() {
     if (border != null) {
       return Container(
