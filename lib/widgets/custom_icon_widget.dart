@@ -11,9 +11,7 @@ class CustomIconWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Map of available icons
     final Map<String, IconData> iconMap = {
-      // A
       'abc': Icons.abc,
       'ac_unit': Icons.ac_unit,
       'access_alarm': Icons.access_alarm,
@@ -172,8 +170,6 @@ class CustomIconWidget extends StatelessWidget {
       'autofps_select': Icons.autofps_select,
       'autorenew': Icons.autorenew,
       'av_timer': Icons.av_timer,
-
-      // B
       'baby_changing_station': Icons.baby_changing_station,
       'back_hand': Icons.back_hand,
       'backpack': Icons.backpack,
@@ -280,8 +276,6 @@ class CustomIconWidget extends StatelessWidget {
       'bus_alert': Icons.bus_alert,
       'business': Icons.business,
       'business_center': Icons.business_center,
-
-      // C
       'cabin': Icons.cabin,
       'cable': Icons.cable,
       'cached': Icons.cached,
@@ -461,8 +455,6 @@ class CustomIconWidget extends StatelessWidget {
       'currency_yuan': Icons.currency_yuan,
       'curtains': Icons.curtains,
       'curtains_closed': Icons.curtains_closed,
-
-      // D
       'dangerous': Icons.dangerous,
       'dark_mode': Icons.dark_mode,
       'dark_mode_outlined': Icons.dark_mode_outlined,
@@ -589,8 +581,6 @@ class CustomIconWidget extends StatelessWidget {
       'dvr': Icons.dvr,
       'dynamic_feed': Icons.dynamic_feed,
       'dynamic_form': Icons.dynamic_form,
-
-      // E
       'e_mobiledata': Icons.e_mobiledata,
       'earbuds': Icons.earbuds,
       'earbuds_battery': Icons.earbuds_battery,
@@ -669,8 +659,6 @@ class CustomIconWidget extends StatelessWidget {
       'exposure_zero': Icons.exposure_zero,
       'extension': Icons.extension,
       'extension_off': Icons.extension_off,
-
-      // F
       'face': Icons.face,
       'face_2': Icons.face_2,
       'face_3': Icons.face_3,
@@ -819,8 +807,6 @@ class CustomIconWidget extends StatelessWidget {
       'fullscreen': Icons.fullscreen,
       'fullscreen_exit': Icons.fullscreen_exit,
       'functions': Icons.functions,
-
-      // G
       'g_mobiledata': Icons.g_mobiledata,
       'g_translate': Icons.g_translate,
       'gamepad': Icons.gamepad,
@@ -864,8 +850,6 @@ class CustomIconWidget extends StatelessWidget {
       'groups_3': Icons.groups_3,
       'h_mobiledata': Icons.h_mobiledata,
       'h_plus_mobiledata': Icons.h_plus_mobiledata,
-
-      // H
       'hail': Icons.hail,
       'handshake': Icons.handshake,
       'handyman': Icons.handyman,
@@ -941,8 +925,6 @@ class CustomIconWidget extends StatelessWidget {
       'https': Icons.https,
       'hub': Icons.hub,
       'hvac': Icons.hvac,
-
-      // I
       'ice_skating': Icons.ice_skating,
       'icecream': Icons.icecream,
       'image': Icons.image,
@@ -981,8 +963,6 @@ class CustomIconWidget extends StatelessWidget {
       'ios_share': Icons.ios_share,
       'iron': Icons.iron,
       'iso': Icons.iso,
-
-      // J
       'javascript': Icons.javascript,
       'join_full': Icons.join_full,
       'join_inner': Icons.join_inner,
@@ -991,8 +971,6 @@ class CustomIconWidget extends StatelessWidget {
       'joystick': Icons.gamepad,
       'jpeg': Icons.image,
       'kayaking': Icons.kayaking,
-
-      // K
       'kebab_dining': Icons.kebab_dining,
       'key': Icons.key,
       'key_off': Icons.key_off,
@@ -1018,8 +996,6 @@ class CustomIconWidget extends StatelessWidget {
       'king_bed': Icons.king_bed,
       'kitchen': Icons.kitchen,
       'kitesurfing': Icons.kitesurfing,
-
-      // L
       'label': Icons.label,
       'label_important': Icons.label_important,
       'label_important_outline': Icons.label_important_outline,
@@ -1127,8 +1103,6 @@ class CustomIconWidget extends StatelessWidget {
       'lte_plus_mobiledata': Icons.lte_plus_mobiledata,
       'luggage': Icons.luggage,
       'lunch_dining': Icons.lunch_dining,
-
-      // M
       'mail': Icons.mail,
       'mail_lock': Icons.mail_lock,
       'mail_outline': Icons.mail_outline,
@@ -1234,8 +1208,6 @@ class CustomIconWidget extends StatelessWidget {
       'my_library_books': Icons.my_library_books,
       'my_library_music': Icons.my_library_music,
       'my_location': Icons.my_location,
-
-      // N
       'nat': Icons.nat,
       'nature': Icons.nature,
       'nature_people': Icons.nature_people,
@@ -1309,8 +1281,6 @@ class CustomIconWidget extends StatelessWidget {
       'now_wallpaper': Icons.now_wallpaper,
       'now_widgets': Icons.now_widgets,
       'numbers': Icons.numbers,
-
-      // O
       'offline_bolt': Icons.offline_bolt,
       'offline_pin': Icons.offline_pin,
       'offline_share': Icons.offline_share,
@@ -1336,8 +1306,6 @@ class CustomIconWidget extends StatelessWidget {
       'outlined_flag': Icons.outlined_flag,
       'output': Icons.output,
       'padding': Icons.padding,
-
-      // P
       'pages': Icons.pages,
       'pageview': Icons.pageview,
       'paid': Icons.paid,
@@ -1504,8 +1472,6 @@ class CustomIconWidget extends StatelessWidget {
       'punch_clock': Icons.punch_clock,
       'push_pin': Icons.push_pin,
       'qr_code': Icons.qr_code,
-
-      // Q
       'qr_code_2': Icons.qr_code_2,
       'qr_code_scanner': Icons.qr_code_scanner,
       'query_builder': Icons.query_builder,
@@ -1517,8 +1483,6 @@ class CustomIconWidget extends StatelessWidget {
       'queue_play_next': Icons.queue_play_next,
       'quickreply': Icons.quickreply,
       'quiz': Icons.quiz,
-
-      // R
       'r_mobiledata': Icons.r_mobiledata,
       'radar': Icons.radar,
       'radio': Icons.radio,
@@ -1612,8 +1576,6 @@ class CustomIconWidget extends StatelessWidget {
       'run_circle': Icons.run_circle,
       'running_with_errors': Icons.running_with_errors,
       'rv_hookup': Icons.rv_hookup,
-
-      // S
       'safety_check': Icons.safety_check,
       'safety_divider': Icons.safety_divider,
       'sailing': Icons.sailing,
@@ -1899,8 +1861,6 @@ class CustomIconWidget extends StatelessWidget {
       'system_security_update_warning': Icons.system_security_update_warning,
       'system_update': Icons.system_update,
       'system_update_alt': Icons.system_update_alt,
-
-      // T
       'tab': Icons.tab,
       'tab_unselected': Icons.tab_unselected,
       'table_bar': Icons.table_bar,
@@ -2006,8 +1966,6 @@ class CustomIconWidget extends StatelessWidget {
       'tv_off': Icons.tv_off,
       'two_wheeler': Icons.two_wheeler,
       'type_specimen': Icons.type_specimen,
-
-      // U
       'u_turn_left': Icons.u_turn_left,
       'u_turn_right': Icons.u_turn_right,
       'umbrella': Icons.umbrella,
@@ -2025,8 +1983,6 @@ class CustomIconWidget extends StatelessWidget {
       'upload_file': Icons.upload_file,
       'usb': Icons.usb,
       'usb_off': Icons.usb_off,
-
-      // V
       'verified': Icons.verified,
       'verified_user': Icons.verified_user,
       'vertical_align_bottom': Icons.vertical_align_bottom,
@@ -2087,8 +2043,6 @@ class CustomIconWidget extends StatelessWidget {
       'vpn_key': Icons.vpn_key,
       'vpn_key_off': Icons.vpn_key_off,
       'vpn_lock': Icons.vpn_lock,
-
-      // W
       'wallet': Icons.wallet,
       'wallet_giftcard': Icons.wallet_giftcard,
       'wallet_membership': Icons.wallet_membership,
@@ -2158,8 +2112,6 @@ class CustomIconWidget extends StatelessWidget {
       'wrap_text': Icons.wrap_text,
       'wrong_location': Icons.wrong_location,
       'wysiwyg': Icons.wysiwyg,
-
-      // X-Z
       'yard': Icons.yard,
       'youtube_searched_for': Icons.youtube_searched_for,
       'zoom_in': Icons.zoom_in,
@@ -2168,7 +2120,6 @@ class CustomIconWidget extends StatelessWidget {
       'zoom_out_map': Icons.zoom_out_map,
     };
 
-    // Check if the icon exists
     if (iconMap.containsKey(iconName)) {
       return Icon(
         iconMap[iconName],
@@ -2177,7 +2128,6 @@ class CustomIconWidget extends StatelessWidget {
         semanticLabel: iconName,
       );
     } else {
-      // Return a fallback icon
       return Icon(
         Icons.help_outline,
         size: size,
